@@ -85,3 +85,40 @@ $ perl caesar.pl cqrbrbrc
 ```
 
 
+## cartesian.pl
+
+print cartesian product.
+
+```
+# $ perl cartesian.pl 1,2 3 4,5
+# 1 3 4
+# 1 3 5
+# 2 3 4
+# 2 3 5
+```
+
+
+## merge.pl
+
+merge two files using a key. key is the string before tab for each line.
+
+```
+$ cat a.txt
+001     AAAA
+002     BBBB
+003     CCCC
+004     DDDD
+005     EEEE
+$ cat b.txt
+001     XXX
+003     YYY
+005     ZZZ
+$ perl merge.pl a.txt b.txt
+001     AAAA    XXX
+002     BBBB
+003     CCCC    YYY
+004     DDDD
+005     EEEE    ZZZ
+```
+
+
