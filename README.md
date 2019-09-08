@@ -122,3 +122,40 @@ $ perl merge.pl a.txt b.txt
 ```
 
 
+## pingb.pl
+
+run ping in background.
+
+```
+pingb.pl [options]        ipaddress_or_hostname  (foreground)
+pingb.pl [options] --exec ipaddress_or_hostname  (background)
+
+
+Options:
+
+  -i, --interval n  time to wait interval for ping, in second
+                    default is 10 sec
+
+  -d, --days n      number of days to continue
+                    default is 7 days
+
+  -h, --help        display this help
+
+
+example below is performed `ping` every 5 second for 3 days.
+  ./pingb.pl -i 5 -d 3 localhost
+
+example below is performed `ping` background.
+logfile is recorded in /tmp/YYYYMMDD-hhmmss_hostname_pingb.log .
+  ./pingb.pl --exec localhost
+```
+
+current pingb use below command pipeline.
+
+```
+ping -W 1 -q -c 3 $host |\
+  awk -F'/' 'END{ print (/^rtt/? "ok "$6" ms":"NG") }' |\
+  xargs -I_ date +"%c $host _"
+
+```
+
