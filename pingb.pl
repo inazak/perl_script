@@ -77,8 +77,8 @@ pingb -- run ping in background
 
 =head1 SYNOPSIS
 
-pingb.pl [options]        ipaddress_or_hostname  (foreground)
-pingb.pl [options] --exec ipaddress_or_hostname  (background)
+  pingb.pl [options]        ipaddress_or_hostname  (foreground)
+  pingb.pl [options] --exec ipaddress_or_hostname  (background)
 
 
 Options:
