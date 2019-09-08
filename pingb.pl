@@ -92,12 +92,14 @@ Options:
   -h, --help        display this help
 
 
-example below is performed `ping` every 5 second for 3 days.
-  ./pingb.pl -i 5 -d 3 localhost
+  example below is performed `ping` every 5 second for 3 days.
 
-example below is performed `ping` background.
-logfile is recorded in /tmp/YYYYMMDD-hhmmss_hostname_pingb.log .
-  ./pingb.pl --exec localhost
+    ./pingb.pl -i 5 -d 3 localhost
+
+  example below is performed `ping` background.
+  logfile is recorded in /tmp/YYYYMMDD-hhmmss_hostname_pingb.log .
+
+    ./pingb.pl --exec localhost
 
 
 
