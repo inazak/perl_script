@@ -159,3 +159,32 @@ ping -W 1 -q -c 3 $host |\
 
 ```
 
+
+
+## lift1.pl
+
+move folder in subfolder to current folder. this script works on *windows only*.
+
+```
+  there is no option, no argument.
+  
+  $ lift1.pl
+
+  For example, if the folder structure is as follows,
+
+  current/ ---+-- a/ ---+--- 001/
+              |         +--- 002/
+              |         +--- 003/
+              |
+              +-- b/ ---+--- 004/
+                        +--- 005/
+
+  The result is as follows.
+
+  current/ ---+--- 001/
+              +--- 002/
+              +--- 003/
+              +--- 004/
+              +--- 005/
+```
+
