@@ -55,6 +55,11 @@ __END__
 
   lift1 (works on windows only)
 
+=head1 OVERVIEW
+
+  move folder in subfolder to current folder.
+  this script works on *windows only*.
+
 =head1 SYNOPSIS
 
   there is no option, no argument.
@@ -77,11 +82,6 @@ __END__
               +--- 003/
               +--- 004/
               +--- 005/
-
-=head1 OVERVIEW
-
-  move folder in subfolder to current folder.
-  this script works on *windows only*.
 
 =cut
 
