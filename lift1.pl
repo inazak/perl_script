@@ -30,7 +30,7 @@ close $batch;
 
 print "Do you want to move? (Y/N)";
 my $answer = <STDIN>;
-exit 1 if $answer !~ m{ \A y \Z }xmsi;
+do { unlink $batchfile; exit 1 } if $answer !~ m{ \A y \Z }xmsi;
 
 system(qq{cmd /c call "$batchfile"});
 
