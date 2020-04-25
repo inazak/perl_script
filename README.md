@@ -188,3 +188,40 @@ move folder in subfolder to current folder. this script works on *windows only*.
               +--- 005/
 ```
 
+
+## rip1.pl
+
+move files in subfolder to current folder.
+this script works on *windows only*.
+
+```
+  there is no option, no argument.
+  
+  $ rip1.pl
+
+  For example, if the folder structure is as follows,
+
+  current/ ---+-- a/ ---+--- 001.jpg
+              |         +--- 002.jpg
+              |         +--- 003.jpg
+              |
+              +-- b/ ---+--- 004.jpg
+                        +--- 005.jpg
+
+  The result is as follows.
+
+  current/ ---+--- a___001.jpg
+              +--- a___002.jpg
+              +--- a___003.jpg
+              +--- b___004.jpg
+              +--- b___005.jpg
+```
+
+failsafe interruption works if the target
+file is not one of the following.
+
+```
+jpg|jpeg|png|bmp|tiff|txt|zip|rar|lnk|url|mp3|pdf
+```
+
+
