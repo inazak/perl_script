@@ -225,3 +225,34 @@ jpg|jpeg|png|bmp|tiff|txt|zip|rar|lnk|url|mp3|pdf
 ```
 
 
+## zeropad.pl
+
+if the number in the file name is not within the specified width,
+this script will be completed with zero.
+
+```
+  $ zeropad.pl
+
+  For example, if the folder structure is as follows,
+
+  current/ ---+--- any1.jpg
+              +--- any10.jpg
+              +--- any100.jpg
+
+  The result is as follows.
+
+  current/ ---+--- any001.jpg
+              +--- any010.jpg
+              +--- any100.jpg
+
+  OPTION
+    -width=N       N is padding width.
+
+  $ zeropad.pl -width=5
+
+  current/ ---+--- any00001.jpg
+              +--- any00010.jpg
+              +--- any00100.jpg
+```
+
+
