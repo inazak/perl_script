@@ -256,3 +256,36 @@ this script will be completed with zero.
 ```
 
 
+## only_in_that_file.pl
+
+extract lines only in one file.
+
+```
+  $ only_in_that_file.pl [-that=FILE] FILE1 FILE2 [..FILE]
+
+  For example,
+
+  $ cat a.txt
+  good
+  news
+  bad
+  news
+
+  $ cat b.txt
+  world
+  news
+
+  $ cat c.txt
+  beautiful
+  world
+
+  $ perl only_in_that_file.pl a.txt b.txt c.txt
+  only in file 'c.txt':   beautiful
+  only in file 'a.txt':   good
+  only in file 'a.txt':   bad
+
+  $ perl only_in_that_file.pl -that=c.txt a.txt b.txt c.txt
+  only in file 'c.txt':   beautiful
+```
+
+
