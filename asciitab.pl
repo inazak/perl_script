@@ -159,12 +159,10 @@ $ cat text.txt
 % Title  : Test tune
 % Author : suki yaki
 %
-   /
-  12 23 32
-   13
-   12
-#10
-# this is it
+/
+12 23 32
+13
+12
 512 40 39 20
 17 27
 /
@@ -182,7 +180,7 @@ $ cat text.txt
   612 310 29
 /
 $
-$ asciitab.pl test.txt
+$ perl asciitab.pl test.txt
  Title  : Test tune
  Author : suki yaki
 
